@@ -11,15 +11,16 @@ document.addEventListener('DOMContentLoaded', () => {
      El orden debe coincidir con data-index en el HTML.
      Al agregar una foto nueva, añade un objeto al final de este array. */
   const photos = [
-    { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=90', title: 'Amanecer en los Andes', desc: 'Boyacá, Colombia · 2025' },
-    { src: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=90', title: 'Penumbra',              desc: 'Estudio · Bogotá · 2025' },
-    { src: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1400&q=90', title: 'Noche Urbana',          desc: 'Medellín · 2024' },
-    { src: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1400&q=90', title: 'Niebla del Quindío',    desc: 'Eje Cafetero · 2024' },
-    { src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=90', title: 'Geometría Oculta',      desc: 'Serie Abstracta · 2025' },
-    { src: 'https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?w=1400&q=90', title: 'Mirada Quieta',         desc: 'Estudio · Cali · 2025' },
-    { src: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=90', title: 'Líneas y Sombra',      desc: 'Bogotá · 2024' },
-    { src: 'https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=1400&q=90', title: 'Crepúsculo',           desc: 'Costa Pacífica · 2024' },
-    { src: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1400&q=90', title: 'Reflejos',             desc: 'Serie Luz · 2025' },
+    { src: 'imgs/monserrate.JPG', title: 'Monserrate', desc: 'Bogotá, Colombia · 2026' },
+    { src: 'imgs/plaza.JPG', title: 'Plaza', desc: 'Bogotá · 2026' },
+    { src: 'imgs/torso.JPG', title: 'Torso',desc: 'Bogotá · 2026' },
+    { src: 'imgs/resistencia.jpeg', title: 'Mural',desc: 'Universidad Nacional · 2026' },
+    { src: 'imgs/producto_1.jpg', title: 'Producto audifonos',desc: 'Serie Temática · 2026' },
+    { src: 'imgs/producto_2.jpg', title: 'Producto auriculares',desc: 'Serie Temática  · 2026' },
+    { src: 'imgs/sobrenubes.jpg', title: 'Volando',      desc: 'Bogotá · 2025' },
+    { src: 'imgs/montañas.jpg', title: 'Montañas',desc: 'Boyacá · 2024' },
+    { src: 'imgs/castillo.jpg', title: 'Cartagena',desc: 'Castillo San Felipe · 2024' },
+    { src: 'imgs/parchao.jpg', title: 'Relajado',desc: 'Gato parchao · 2025' },
   ];
 
   /* ─── Referencias DOM ─── */
