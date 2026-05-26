@@ -1,1 +1,0 @@
-# ketizam.github.io
