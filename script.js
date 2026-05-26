@@ -141,25 +141,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   grid.querySelectorAll('.photo-item').forEach(item => observer.observe(item));
 
-  /* ────────────────────────────────────────
-     MENÚ MÓVIL (toggle simple)
-  ──────────────────────────────────────── */
-  const navToggle = document.querySelector('.nav-toggle');
-  const siteNav   = document.querySelector('.site-nav');
-
-  if (navToggle) {
-    navToggle.addEventListener('click', () => {
-      const open = siteNav.style.display === 'flex';
-      siteNav.style.display = open ? 'none' : 'flex';
-      siteNav.style.flexDirection = 'column';
-      siteNav.style.position = 'absolute';
-      siteNav.style.top = '72px';
-      siteNav.style.right = '20px';
-      siteNav.style.background = 'var(--surface)';
-      siteNav.style.padding = '20px 28px';
-      siteNav.style.border = '1px solid var(--border)';
-      siteNav.style.borderRadius = '4px';
-    });
-  }
 
 });
