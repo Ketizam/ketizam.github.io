@@ -193,7 +193,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   gap: var(--gap);
 }
 
-/* Variantes de tamaño — añade estas clases en el HTML para variar el grid */
+/* Variantes de tamaño*/
 .photo-wide { grid-column: span 2; }
 .photo-tall { grid-row:   span 2; }
 .photo-big  { grid-column: span 2; grid-row: span 2; }
@@ -343,70 +343,6 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   pointer-events: none;
-}
-
-/* ══════════════════════════════════════════
-   CONTACT
-══════════════════════════════════════════ */
-.contact-section {
-  padding: clamp(80px, 12vh, 160px) clamp(20px, 5vw, 72px);
-  text-align: center;
-}
-
-.contact-title {
-  font-family: var(--font-serif);
-  font-size: clamp(40px, 7vw, 90px);
-  font-weight: 300;
-  margin-bottom: 12px;
-}
-
-.contact-sub {
-  font-size: 13px;
-  color: var(--text-muted);
-  letter-spacing: .1em;
-  margin-bottom: 36px;
-}
-
-.contact-email {
-  display: inline-block;
-  font-family: var(--font-serif);
-  font-size: clamp(18px, 3vw, 32px);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--accent);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 4px;
-  transition: border-color var(--trans);
-}
-.contact-email:hover { border-color: var(--accent); }
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 48px;
-}
-.social-links a {
-  font-size: 10px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 3px;
-  transition: color var(--trans), border-color var(--trans);
-}
-.social-links a:hover { color: var(--accent); border-color: var(--accent); }
-
-/* ══════════════════════════════════════════
-   FOOTER
-══════════════════════════════════════════ */
-.site-footer {
-  border-top: 1px solid var(--border);
-  padding: 24px clamp(20px, 5vw, 72px);
-  text-align: center;
-  font-size: 11px;
-  letter-spacing: .1em;
-  color: var(--text-muted);
 }
 
 /* ══════════════════════════════════════════
