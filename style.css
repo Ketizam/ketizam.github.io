@@ -62,7 +62,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; }
   font-size: 9px;
   letter-spacing: .25em;
   text-transform: uppercase;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .site-nav { display: flex; gap: 36px; }
