@@ -1,15 +1,8 @@
-/* ══════════════════════════════════════════
-   script.js — Galería Fotográfica
-   · Filtros por categoría
-   · Lightbox con navegación
-   · Animaciones por scroll (IntersectionObserver)
-══════════════════════════════════════════ */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ─── Datos de fotos para el lightbox ───
-     El orden debe coincidir con data-index en el HTML.
-     Al agregar una foto nueva, añade un objeto al final de este array. */
+
   const photos = [
     { src: 'imgs/monserrate.JPG', title: 'Monserrate', desc: 'Bogotá, Colombia · 2026' },
     { src: 'imgs/plaza.JPG', title: 'Plaza', desc: 'Bogotá · 2026' },
@@ -23,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { src: 'imgs/parchao.jpg', title: 'Relajado',desc: 'Gato parchao · 2025' },
   ];
 
-  /* ─── Referencias DOM ─── */
+
   const grid       = document.getElementById('galleryGrid');
   const filterBtns = document.querySelectorAll('.filter-btn');
   const lightbox   = document.getElementById('lightbox');
@@ -35,42 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lbNext     = document.getElementById('lbNext');
 
   let currentIndex = 0;
-  let visibleIndices = []; // índices visibles según filtro activo
 
-  /* ────────────────────────────────────────
-     FILTROS
-  ──────────────────────────────────────── */
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-      const items  = grid.querySelectorAll('.photo-item');
-
-      items.forEach(item => {
-        const match = filter === 'all' || item.dataset.category === filter;
-        item.classList.toggle('hidden', !match);
-      });
-
-      buildVisibleIndices(filter);
-    });
-  });
-
-  function buildVisibleIndices(filter) {
-    const items = grid.querySelectorAll('.photo-item');
-    visibleIndices = [];
-    items.forEach(item => {
-      if (filter === 'all' || item.dataset.category === filter) {
-        visibleIndices.push(Number(item.querySelector('.photo-expand').dataset.index));
-      }
-    });
-  }
-  buildVisibleIndices('all'); // inicializar
-
-  /* ────────────────────────────────────────
-     LIGHTBOX
-  ──────────────────────────────────────── */
   function openLightbox(index) {
     currentIndex = index;
     const photo = photos[index];
@@ -114,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === lightbox) closeLightbox();
   });
 
-  // Teclado
   document.addEventListener('keydown', e => {
     if (!lightbox.classList.contains('open')) return;
     if (e.key === 'Escape')      closeLightbox();
@@ -122,9 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight')  navigateLightbox(1);
   });
 
-  /* ────────────────────────────────────────
-     ANIMACIONES DE ENTRADA (scroll)
-  ──────────────────────────────────────── */
+
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach((entry, i) => {
